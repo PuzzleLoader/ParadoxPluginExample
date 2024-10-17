@@ -18,5 +18,5 @@ buildscript {
     }
 }
 
-rootProject.name = 'ExamplePlugin'
+rootProject.name = 'ParadoxPluginExample'
 

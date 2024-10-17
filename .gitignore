@@ -6,7 +6,9 @@ build/
 !**/src/test/**/build/
 
 ### Paradox ###
-
+libs/
+run/
+!libs/CRParadoxGradle-1.1.2.jar
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
