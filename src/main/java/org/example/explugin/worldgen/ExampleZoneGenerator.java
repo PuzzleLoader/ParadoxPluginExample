@@ -1,4 +1,4 @@
-package org.example.exmod.worldgen;
+package org.example.explugin.worldgen;
 
 import finalforeach.cosmicreach.blocks.BlockState;
 import finalforeach.cosmicreach.savelib.blockdata.LayeredBlockData;

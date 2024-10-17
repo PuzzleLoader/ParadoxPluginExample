@@ -4,14 +4,19 @@ buildscript {
             name "JitPack"
             url "https://jitpack.io"
         }
+        flatDir {
+            // to use local builds
+            dirs 'libs'
+        }
         mavenCentral()
         gradlePluginPortal()
     }
     dependencies {
         classpath "com.github.johnrengelman:shadow:8.1.1"
-        classpath "com.github.PuzzleLoader:CRPuzzleGradle:$puzzle_gradle_version"
+        classpath "de.undercouch.download:de.undercouch.download.gradle.plugin:5.0.4"
+        classpath "com.github.Puzzle:CRParadoxGradle:$paradox_gradle_version"
     }
 }
 
-rootProject.name = 'ExampleMod'
+rootProject.name = 'ExamplePlugin'
 
