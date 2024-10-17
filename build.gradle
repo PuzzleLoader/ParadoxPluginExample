@@ -1,0 +1,32 @@
+plugins {
+    id "java"
+    id "cr_paradox_gradle"
+    id "com.github.johnrengelman.shadow"
+    id "de.undercouch.download"
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+}
+
+processResources {
+    // Locations of where to inject the properties
+    def resourceTargets = [ "paradox.plugin.json" ]
+
+    // Left item is the name in the target, right is the varuable name
+    def replaceProperties = [
+            "plugin_version"     : version,
+            "plugin_name"        : project.name,
+            "plugin_id"          : id,
+    ]
+
+
+    inputs.properties replaceProperties
+    replaceProperties.put "project", project
+    filesMatching(resourceTargets) {
+        expand replaceProperties
+    }
+}
